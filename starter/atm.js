@@ -3,19 +3,22 @@ $(function(){
 
 //Begin work on the Checking Account
  var input = 0
+ var input2 = 1
  var result = $('#resultCalc');
-		//Checking account deposit function
+
+ 	 
+	 function clearInputs(){
+	 	$('#calculator').trigger('reset');
+	 }
+		
 $('#addCalc').on('click', function(){
 	 var amountAdd = parseInt($('#amountAdd').val());
+	 if(isNaN(amountAdd)){
+	 	amountAdd = 0;
+	 }
 	 input += amountAdd;
 	 $('#resultCalc').html(input);
-	 //clearing input field but breaks after second click
-	 // function clearInputs(){
-	 // 	$('#amountAdd').val(' ')
-	 // }
-	 // if($('#addCalc').on){
-	 // 	clearInputs();
-	 // }
+	 clearInputs();
 });
  $('#subtractCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
@@ -25,14 +28,14 @@ $('#addCalc').on('click', function(){
  });
   $('#multiplyCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
- 	input *= amountAdd
- 	$('#resultCalc').html(input);
+ 	input2 *= amountAdd
+ 	$('#resultCalc').html(input2);
 
  });
    $('#divideCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
- 	input /= amountAdd
- 	$('#resultCalc').html(input);
+ 	input2 /= amountAdd
+ 	$('#resultCalc').html(input2);
 
  });
  //redo everything for saving balance and use if statements to stop at zero
