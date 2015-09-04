@@ -22,6 +22,9 @@ $('#addCalc').on('click', function(){
 });
  $('#subtractCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
+ 	if(isNaN(amountAdd)){
+	 	amountAdd = 0;
+	 }
  	input -= amountAdd
  	$('#resultCalc').html(input);
  	clearInputs();
@@ -29,6 +32,9 @@ $('#addCalc').on('click', function(){
  });
   $('#multiplyCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
+ 	if(isNaN(amountAdd)){
+	 	amountAdd = 0;
+	 }
  	input2 *= amountAdd
  	$('#resultCalc').html(input2);
  	clearInputs();
@@ -36,6 +42,9 @@ $('#addCalc').on('click', function(){
 
    $('#divideCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
+ 	if(isNaN(amountAdd)){
+	 	amountAdd = 0;
+	 }
  	input2 /= amountAdd
  	$('#resultCalc').html(input2);
  	clearInputs();
