@@ -20,6 +20,8 @@ $('#depositChecking').on('click', function(){
  	$('#checkingBalance').html(deposit);
 
  });
+
+ 
  //redo everything for saving balance and use if statements to stop at zero
 
 			//Get value from the amountChecking input field
