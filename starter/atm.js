@@ -67,15 +67,5 @@ $('#clearCalc').on('click', function () {
     $('#resultCalc').html(input);
 });
 
-// trying to make an equals button work
-
-// $('#equalsCalc').on('click', function () {
-<<<<<<< HEAD
-//     $('#resultCalc').html();
-=======
-//     result = ;
-//     $('#resultCalc').html(result);
->>>>>>> b8744358220de4dbca4d8fa561a5f74cae512c68
-// });
  
 });
