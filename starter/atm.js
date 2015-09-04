@@ -56,7 +56,7 @@ $('#addCalc').on('click', function(){
  });
  
  //clears input field when clear button is clicked
- 
+
 $('#clearCalc').on('click', function () {
     input = 0;
     $('#resultCalc').html(input);
@@ -64,9 +64,8 @@ $('#clearCalc').on('click', function () {
 
 // trying to make an equals button work
 
-// $('#clearCalc').on('click', function () {
-//     input = 0;
-//     $('#resultCalc').html(result);
+// $('#equalsCalc').on('click', function () {
+//     $('#resultCalc').html();
 // });
  
  //redo everything for saving balance and use if statements to stop at zero
