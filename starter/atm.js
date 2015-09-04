@@ -3,12 +3,16 @@ $(function(){
 
 //Begin work on the Checking Account
  var input = 0
- var input2 = 1
+ 
  var result = $('#resultCalc');
 
  	 function clearInputs(){
 	 	$('#calculator').trigger('reset');
 	 }
+	 //  function clearOutputs(){
+	 // 	$('#resultCalc');
+	 // }
+
 		
 $('#addCalc').on('click', function(){
 	 var amountAdd = parseInt($('#amountAdd').val());
@@ -35,8 +39,8 @@ $('#addCalc').on('click', function(){
  	if(isNaN(amountAdd)){
 	 	amountAdd = 0;
 	 }
- 	input2 *= amountAdd
- 	$('#resultCalc').html(input2);
+ 	input *= amountAdd
+ 	$('#resultCalc').html(input);
  	clearInputs();
  });
 
@@ -45,14 +49,25 @@ $('#addCalc').on('click', function(){
  	if(isNaN(amountAdd)){
 	 	amountAdd = 0;
 	 }
- 	input2 /= amountAdd
- 	$('#resultCalc').html(input2);
+ 	input /= amountAdd
+ 	$('#resultCalc').html(input);
  	clearInputs();
 
  });
- $('#clearCalc').on('click', function(){
- 	clearInputs();
- })
+ 
+ //clears input field when clear button is clicked
+ 
+$('#clearCalc').on('click', function () {
+    input = 0;
+    $('#resultCalc').html(input);
+});
+
+// trying to make an equals button work
+
+// $('#clearCalc').on('click', function () {
+//     input = 0;
+//     $('#resultCalc').html(result);
+// });
  
  //redo everything for saving balance and use if statements to stop at zero
 
