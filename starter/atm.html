@@ -3,13 +3,15 @@
   <head>
     <title>Calculator</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="atm.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
   <body>
     <div class="header">
-      <div><img src="https://s-media-cache-ak0.pinimg.com/736x/e3/fa/8f/e3fa8ffd66f263030e8bf9a0e64fd206.jpg" /></div>
-      <div class="title">Great Scott!</div>
+      <!-- <div><img src="https://s-media-cache-ak0.pinimg.com/736x/e3/fa/8f/e3fa8ffd66f263030e8bf9a0e64fd206.jpg" /></div>
+      <div class="title">Great Scott!</div> -->
     </div>
     
     <div class="account">
@@ -22,22 +24,36 @@
       <form id="calculator" name="calculator">
         <div id= "resultCalc" class="balance">0</div>
 
-      <input id = "amountAdd" type="text" placeholder="ENTER A NUMBER" />
-      <!-- user enters a number -->
+        <input id = "amountAdd" type="text" placeholder="ENTER A NUMBER" />
+        <!-- user enters a number -->
 
-      <input id = "addCalc" type="button" value="ADD +" />
-      <!-- addition button -->
+        <div class="container">
+          
+          <div class="row">
+            
+              <input id = "addCalc" type="button" value="ADD +" />
+              <!-- addition button -->
+            
+              <input id = "subtractCalc" type="button" value="SUBTRACT -" />
+              <!-- subraction button -->
 
-      <input id = "subtractCalc" type="button" value="SUBTRACT -" />
-      <!-- subraction button -->
+              <input id = "multiplyCalc" type="button" value="MULTIPLY *" />
+              <!-- multiplication button -->
 
-      <input id = "multiplyCalc" type="button" value="MULTIPLY *" />
-      <!-- multiplication button -->
+              <input id = "divideCalc" type="button" value="DIVIDE /" />
+              <!-- division button -->
+            
+          </div>
 
-      <input id = "divideCalc" type="button" value="DIVIDE /" />
+          <div class="row">
+          <input id = "clearCalc" type="button" value="CLEAR" />
+          <!-- clear button -->
 
-      <input id = "clearCalc" type="button" value="CLEAR" />
-      <!-- division button -->
+           <input id = "equalsCalc" type="button" value="   =   " />
+          </div>
+      <!-- equals button -->
+        </div> 
+
       </form>
     </div>
 
