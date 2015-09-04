@@ -8,10 +8,6 @@ body {
   width: 700px;
 }
 
-.header {
-  margin: 50px 0px;
-}
-
 .title {
   color: black;
   font-family: 'Play';
@@ -20,6 +16,7 @@ body {
 
 h2 {
   color: white;
+  font-size: 2em
 }
 
 .account {
@@ -39,6 +36,6 @@ h2 {
   font-family: 'Play', sans-serif;
   font-size: 50px;
   margin: 5px;
-  padding: 25px 0px;
+  padding: 15px 0px;
 }
 
