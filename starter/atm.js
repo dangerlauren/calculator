@@ -2,22 +2,37 @@
 $(function(){
 
 //Begin work on the Checking Account
- var deposit = 0
- var checkingBalance = $('#checkingBalance');
+ var input = 0
+ var result = $('#resultCalc');
 		//Checking account deposit function
-$('#depositChecking').on('click', function(){
-	 var amountChecking = parseInt($('#amountChecking').val());
-	 deposit += amountChecking;
-	 $('#checkingBalance').html(deposit);
-
+$('#addCalc').on('click', function(){
+	 var amountAdd = parseInt($('#amountAdd').val());
+	 input += amountAdd;
+	 $('#resultCalc').html(input);
+	 //clearing input field but breaks after second click
+	 // function clearInputs(){
+	 // 	$('#amountAdd').val(' ')
+	 // }
+	 // if($('#addCalc').on){
+	 // 	clearInputs();
+	 // }
 });
- $('#withdrawChecking').on('click', function(){
- 	var amountChecking = parseInt($('#amountChecking').val());
- 	if($('#amountChecking').val() > $('#checkingBalance').val()){
- 		$('#checkingBalance').html(0);
- 	}
- 	deposit -= amountChecking;
- 	$('#checkingBalance').html(deposit);
+ $('#subtractCalc').on('click', function(){
+ 	var amountAdd = parseInt($('#amountAdd').val());
+ 	input -= amountAdd
+ 	$('#resultCalc').html(input);
+
+ });
+  $('#multiplyCalc').on('click', function(){
+ 	var amountAdd = parseInt($('#amountAdd').val());
+ 	input *= amountAdd
+ 	$('#resultCalc').html(input);
+
+ });
+   $('#divideCalc').on('click', function(){
+ 	var amountAdd = parseInt($('#amountAdd').val());
+ 	input /= amountAdd
+ 	$('#resultCalc').html(input);
 
  });
 
