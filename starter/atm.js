@@ -6,8 +6,7 @@ $(function(){
  var input2 = 1
  var result = $('#resultCalc');
 
- 	 
-	 function clearInputs(){
+ 	 function clearInputs(){
 	 	$('#calculator').trigger('reset');
 	 }
 		
@@ -19,25 +18,33 @@ $('#addCalc').on('click', function(){
 	 input += amountAdd;
 	 $('#resultCalc').html(input);
 	 clearInputs();
+
 });
  $('#subtractCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
  	input -= amountAdd
  	$('#resultCalc').html(input);
+ 	clearInputs();
 
  });
   $('#multiplyCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
  	input2 *= amountAdd
  	$('#resultCalc').html(input2);
-
+ 	clearInputs();
  });
+
    $('#divideCalc').on('click', function(){
  	var amountAdd = parseInt($('#amountAdd').val());
  	input2 /= amountAdd
  	$('#resultCalc').html(input2);
+ 	clearInputs();
 
  });
+ $('#clearCalc').on('click', function(){
+ 	clearInputs();
+ })
+ 
  //redo everything for saving balance and use if statements to stop at zero
 
 			//Get value from the amountChecking input field
